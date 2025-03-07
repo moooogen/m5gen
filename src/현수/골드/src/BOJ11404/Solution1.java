@@ -1,7 +1,7 @@
 package BOJ11404;
 import java.util.*;
-
-public class Main2 {
+//플로이드 워셜 : 메모리(241176 kb), 시간(1200 ms)
+public class Solution1 {
     static final int INF = 1000000000; // 무한대 값 설정
     static int n, m;
     static int[][] fee;
