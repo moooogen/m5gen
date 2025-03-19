@@ -14,11 +14,13 @@ public class Main {
 		int cnt =0;
 		
 		for(int i=1; i<=n ; i++) {
-			if(i == start * 10) {
-				len++;
-				start = start * 10;
+			//자리수가 변하는 조건 (10일때 100일때 1000일때로 봄)
+			if(i == start * 10) { 
+				//10, 100 이때가 자리수가 1->2 , 2-> 3자리 수가 됨
+				len++; //자리수 len을 늘리고 1-2-3- ...
+				start = start * 10; // 다음 스타트 값을 10-> 100->1000으로 늘림
 			}
-			cnt += len;
+			cnt += len;// 자리수 늘림
 		}
 		System.out.println(cnt);
 	}

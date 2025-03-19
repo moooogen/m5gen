@@ -37,12 +37,13 @@ public class Main {
     }
 
     static void dfs(int node) {
-        visited[node] = true;
+        visited[node] = true;//시작점 방문 처리
         System.out.print(node + " ");
 
-        for (int next : arr[node]) {
+        for (int next : arr[node]) {//연결된 정점 리스트 돌기
             if (!visited[next]) {
-                dfs(next);
+                dfs(next);//방문안했으면 재귀
+                //fasle 처리는 다시 방문 안할거니까 X
             }
         }
     }
